@@ -1,0 +1,83 @@
+{
+  "architecture": "lightweight",
+  "development_only": true,
+  "split": "test",
+  "samples": 6,
+  "accuracy": 0.5,
+  "macro_f1": 0.3333333333333333,
+  "classification_report": {
+    "fixture_a": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "fixture_b": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 3.0
+    },
+    "accuracy": 0.5,
+    "macro avg": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 6.0
+    },
+    "weighted avg": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 6.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "parameters": 106130,
+  "checkpoint_bytes": 440159,
+  "latency_ms_median": 2.1288749976520194,
+  "latency_ms_p95": 2.470969247951871,
+  "throughput_images_s": 463.87266908336824,
+  "peak_observed_process_rss_bytes": 391512064,
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu_count": 10,
+    "torch": "2.13.0",
+    "threads": 4,
+    "batch_size": 1,
+    "device": "cpu",
+    "preprocessing_in_timing": false
+  },
+  "threshold_selection": null,
+  "misclassifications": [
+    {
+      "path": "fixture_b/16.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.5439066886901855
+    },
+    {
+      "path": "fixture_b/25.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.5406084656715393
+    },
+    {
+      "path": "fixture_b/5.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.5451685190200806
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "manifest": "../../work/smoke-manifest.json",
+  "model": "hybrid",
+  "output": "../../work/experiments/hybrid",
+  "epochs": 1,
+  "batch_size": 8,
+  "lr": 0.0003,
+  "seed": 42,
+  "threads": 2,
+  "initialize": null,
+  "device": "cpu",
+  "torch": "2.13.0"
+}

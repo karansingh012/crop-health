@@ -1,0 +1,1 @@
+PASS: torch 2.13.0+cpu in the serving Docker container. Lightweight forward pass with a random input tensor produced shape (1, 2). This verifies runtime wiring only, not disease prediction accuracy.

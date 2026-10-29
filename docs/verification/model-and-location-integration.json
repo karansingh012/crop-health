@@ -1,0 +1,99 @@
+{
+  "health": {
+    "status": "ok",
+    "model": "configured"
+  },
+  "scan_id": 9,
+  "prediction": {
+    "status": "uncertain",
+    "label": "Apple___Black_rot",
+    "score": 0.4493999779224396,
+    "score_interpretation": "Uncalibrated model softmax score, not a probability of disease.",
+    "research_note": "Research preview: trained on a limited PlantVillage subset; field reliability is not established.",
+    "threshold": 0.54,
+    "quality": [],
+    "model": "transfer_hybrid",
+    "artifact_sha256": "fdf93638a047348fa62f95c9c1e19693c4cafbe8f89629957258ce087ca0c568",
+    "message": "Please retake the image or seek expert advice.",
+    "guidance": {
+      "symptoms": "Disease-specific guidance is not available for this class.",
+      "care": "Record symptoms, photograph the whole plant and affected leaves, and contact a local agricultural extension service.",
+      "source": null,
+      "warnings": [
+        "Image classification is not a confirmed diagnosis. Seek qualified local advice before treatment. Weather does not prove infection."
+      ]
+    },
+    "ood_warning": "Unsupported crops and non-plant images are not reliably detected."
+  },
+  "reanalysis_preserved_original": true,
+  "hindi_report_bytes": 51659,
+  "place_search": [
+    {
+      "id": 1264733,
+      "name": "लखनऊ",
+      "region": "उत्तर प्रदेश",
+      "country": "भारत",
+      "latitude": 26.83928,
+      "longitude": 80.92313
+    },
+    {
+      "id": 4464326,
+      "name": "Dunn",
+      "region": "उत्तरी केरोलिना",
+      "country": "संयुक्त राज्य अमेरिका",
+      "latitude": 35.30627,
+      "longitude": -78.6089
+    },
+    {
+      "id": 2159389,
+      "name": "Lucknow",
+      "region": "विक्टोरिया",
+      "country": "ऑस्ट्रेलिया",
+      "latitude": -37.81667,
+      "longitude": 147.65
+    },
+    {
+      "id": 6061818,
+      "name": "Lucknow",
+      "region": "ओण्टारियो",
+      "country": "कनाडा",
+      "latitude": 43.96054,
+      "longitude": -81.51284
+    },
+    {
+      "id": 2159390,
+      "name": "Lucknow",
+      "region": "न्यू साउथ वेल्स",
+      "country": "ऑस्ट्रेलिया",
+      "latitude": -33.34602,
+      "longitude": 149.16206
+    },
+    {
+      "id": 4434402,
+      "name": "Luckney",
+      "region": "मिसिसिप्पी",
+      "country": "संयुक्त राज्य अमेरिका",
+      "latitude": 32.34153,
+      "longitude": -90.07564
+    },
+    {
+      "id": 4585940,
+      "name": "Lucknow",
+      "region": "दक्षिणी केरोलाइना",
+      "country": "संयुक्त राज्य अमेरिका",
+      "latitude": 34.29265,
+      "longitude": -80.33757
+    },
+    {
+      "id": 5035973,
+      "name": "Lucknow",
+      "region": "मिनेसोटा",
+      "country": "संयुक्त राज्य अमेरिका",
+      "latitude": 47.50104,
+      "longitude": -92.73629
+    }
+  ],
+  "weather_status": 200,
+  "test_image_true_class": "Apple___Apple_scab",
+  "note": "Actual held-out PlantVillage image; this verifies deployment, not field reliability."
+}

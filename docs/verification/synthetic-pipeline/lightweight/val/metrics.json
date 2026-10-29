@@ -1,0 +1,89 @@
+{
+  "architecture": "lightweight",
+  "development_only": true,
+  "split": "val",
+  "samples": 6,
+  "accuracy": 0.5,
+  "macro_f1": 0.3333333333333333,
+  "classification_report": {
+    "fixture_a": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "fixture_b": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 3.0
+    },
+    "accuracy": 0.5,
+    "macro avg": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 6.0
+    },
+    "weighted avg": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 6.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "parameters": 106130,
+  "checkpoint_bytes": 440415,
+  "latency_ms_median": 1.2686250011029188,
+  "latency_ms_p95": 1.3094060004732455,
+  "throughput_images_s": 792.3713647213199,
+  "peak_observed_process_rss_bytes": 408174592,
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu_count": 10,
+    "torch": "2.13.0",
+    "threads": 4,
+    "batch_size": 1,
+    "device": "cpu",
+    "preprocessing_in_timing": false
+  },
+  "threshold_selection": {
+    "threshold": null,
+    "minimum_samples": 20,
+    "target_empirical_accuracy": 0.9,
+    "validation_samples": 6,
+    "note": "Empirical selection; not a guarantee or probability calibration."
+  },
+  "misclassifications": [
+    {
+      "path": "fixture_b/0.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.540728747844696
+    },
+    {
+      "path": "fixture_b/13.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.5275975465774536
+    },
+    {
+      "path": "fixture_b/4.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.5417673587799072
+    }
+  ]
+}

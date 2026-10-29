@@ -1,0 +1,14 @@
+{
+  "manifest": "datasets/pilot-manifest.json",
+  "model": "transfer_hybrid",
+  "output": "experiments/pilot",
+  "epochs": 10,
+  "batch_size": 32,
+  "lr": 0.001,
+  "seed": 42,
+  "threads": 4,
+  "initialize": null,
+  "pretrained": true,
+  "device": "cpu",
+  "torch": "2.13.0"
+}

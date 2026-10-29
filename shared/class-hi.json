@@ -1,0 +1,41 @@
+{
+  "crops": {
+    "Apple": "सेब",
+    "Blueberry": "ब्लूबेरी",
+    "Cherry": "चेरी",
+    "Corn": "मक्का",
+    "Grape": "अंगूर",
+    "Orange": "संतरा",
+    "Peach": "आड़ू",
+    "Pepper": "मिर्च",
+    "Potato": "आलू",
+    "Raspberry": "रसभरी",
+    "Soybean": "सोयाबीन",
+    "Squash": "स्क्वैश",
+    "Strawberry": "स्ट्रॉबेरी",
+    "Tomato": "टमाटर"
+  },
+  "diseases": {
+    "healthy": "स्वस्थ श्रेणी",
+    "Apple_scab": "सेब का स्कैब",
+    "Black_rot": "काला सड़न",
+    "Cedar_apple_rust": "सीडर सेब रतुआ",
+    "Powdery_mildew": "चूर्णिल आसिता",
+    "Cercospora_leaf_spot Gray_leaf_spot": "सर्कोस्पोरा / धूसर पत्ती धब्बा",
+    "Common_rust_": "सामान्य रतुआ",
+    "Northern_Leaf_Blight": "उत्तरी पत्ती झुलसा",
+    "Esca_(Black_Measles)": "एस्का",
+    "Leaf_blight_(Isariopsis_Leaf_Spot)": "पत्ती झुलसा",
+    "Haunglongbing_(Citrus_greening)": "सिट्रस ग्रीनिंग",
+    "Bacterial_spot": "जीवाणु धब्बा",
+    "Early_blight": "अगेती झुलसा",
+    "Late_blight": "पछेती झुलसा",
+    "Leaf_scorch": "पत्ती झुलसन",
+    "Leaf_Mold": "पत्ती फफूँद",
+    "Septoria_leaf_spot": "सेप्टोरिया पत्ती धब्बा",
+    "Spider_mites Two-spotted_spider_mite": "दो धब्बों वाली मकड़ी माइट",
+    "Target_Spot": "टारगेट स्पॉट",
+    "Tomato_Yellow_Leaf_Curl_Virus": "टमाटर पीली पत्ती मोड़क विषाणु",
+    "Tomato_mosaic_virus": "टमाटर मोज़ेक विषाणु"
+  }
+}

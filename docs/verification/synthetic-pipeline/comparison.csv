@@ -1,0 +1,8 @@
+model,split,development_only,samples,accuracy,macro_f1,precision_macro,recall_macro,parameters,checkpoint_bytes,latency_ms,source
+vit,test,True,6,0.5,0.3333333333333333,0.25,0.5,462914,1869051,0.5605839996860595,docs/verification/synthetic-pipeline/vit/test/metrics.json
+cnn,test,True,6,0.5,0.3333333333333333,0.25,0.5,41522,173901,1.385604498864268,docs/verification/synthetic-pipeline/cnn/test/metrics.json
+optimized,test,True,6,0.5,0.3333333333333333,0.25,0.5,106130,440159,1.718374500342179,docs/verification/synthetic-pipeline/optimized/test/metrics.json
+lightweight,test,True,6,0.5,0.3333333333333333,0.25,0.5,106130,440159,2.1288749976520194,docs/verification/synthetic-pipeline/lightweight/test/metrics.json
+lightweight,external,True,6,0.5,0.3333333333333333,0.25,0.5,106130,440159,3.0539164999936474,docs/verification/synthetic-pipeline/lightweight/external/metrics.json
+lightweight,val,True,6,0.5,0.3333333333333333,0.25,0.5,106130,440415,1.2686250011029188,docs/verification/synthetic-pipeline/lightweight/val/metrics.json
+hybrid,test,True,6,0.6666666666666666,0.6666666666666666,0.6666666666666666,0.6666666666666666,504146,2039631,2.2305629991024034,docs/verification/synthetic-pipeline/hybrid/test/metrics.json

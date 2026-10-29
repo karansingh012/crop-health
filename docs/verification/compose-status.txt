@@ -1,0 +1,4 @@
+NAME                            IMAGE                         COMMAND                  SERVICE    CREATED              STATUS                        PORTS
+canopy-crop-health-backend-1    canopy-crop-health-backend    "uvicorn backend.app…"   backend    About a minute ago   Up About a minute (healthy)   8000/tcp
+canopy-crop-health-db-1         postgres:16-alpine            "docker-entrypoint.s…"   db         8 minutes ago        Up 3 minutes (healthy)        5432/tcp
+canopy-crop-health-frontend-1   canopy-crop-health-frontend   "/docker-entrypoint.…"   frontend   3 minutes ago        Up 2 minutes                  127.0.0.1:8080->8080/tcp

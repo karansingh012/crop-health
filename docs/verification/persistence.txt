@@ -1,0 +1,1 @@
+PASS: After docker compose restart db backend, the existing session, scan record, private image and PDF report all remained accessible (HTTP 200).

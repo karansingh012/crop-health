@@ -1,0 +1,61 @@
+name: canopy-crop-health
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: canopy
+      POSTGRES_DB: canopy
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U canopy -d canopy]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  migrate:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://canopy:${POSTGRES_PASSWORD}@db:5432/canopy
+    command: [alembic, -c, backend/alembic.ini, upgrade, head]
+    depends_on:
+      db:
+        condition: service_healthy
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://canopy:${POSTGRES_PASSWORD}@db:5432/canopy
+      UPLOAD_DIR: /app/uploads
+      MODEL_PATH: /app/models/selected.pt
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+      WEATHER_ENABLED: ${WEATHER_ENABLED:-true}
+      OPEN_METEO_API_KEY: ${OPEN_METEO_API_KEY:-}
+      EXPERT_NAME: ${EXPERT_NAME:-Agricultural support}
+      EXPERT_EMAIL: ${EXPERT_EMAIL:-}
+      FOLLOWUP_DAYS: ${FOLLOWUP_DAYS:-7}
+    volumes:
+      - uploads:/app/uploads
+      - ./models:/app/models:ro
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["127.0.0.1:8080:8080"]
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  postgres_data:
+  uploads:

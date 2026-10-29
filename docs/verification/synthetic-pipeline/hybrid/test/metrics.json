@@ -1,0 +1,77 @@
+{
+  "architecture": "hybrid",
+  "development_only": true,
+  "split": "test",
+  "samples": 6,
+  "accuracy": 0.6666666666666666,
+  "macro_f1": 0.6666666666666666,
+  "classification_report": {
+    "fixture_a": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "fixture_b": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "accuracy": 0.6666666666666666,
+    "macro avg": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 6.0
+    },
+    "weighted avg": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 6.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "parameters": 504146,
+  "checkpoint_bytes": 2039631,
+  "latency_ms_median": 2.2305629991024034,
+  "latency_ms_p95": 2.2771037502025138,
+  "throughput_images_s": 449.7484444583413,
+  "peak_observed_process_rss_bytes": 410648576,
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "cpu_count": 10,
+    "torch": "2.13.0",
+    "threads": 4,
+    "batch_size": 1,
+    "device": "cpu",
+    "preprocessing_in_timing": false
+  },
+  "threshold_selection": null,
+  "misclassifications": [
+    {
+      "path": "fixture_a/11.png",
+      "true": "fixture_a",
+      "predicted": "fixture_b",
+      "score": 0.5101143717765808
+    },
+    {
+      "path": "fixture_b/16.png",
+      "true": "fixture_b",
+      "predicted": "fixture_a",
+      "score": 0.5332086086273193
+    }
+  ]
+}
